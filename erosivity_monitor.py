@@ -16,9 +16,9 @@ from scipy.interpolate import Rbf
 from PIL import Image, ImageColor
 import os
 
-# Get the directory where this script is located
+# Get the directory where this script is located (repo root)
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_ROOT = os.path.dirname(SCRIPT_DIR)
+PROJECT_ROOT = SCRIPT_DIR
 
 
 # ── Internationalization (i18n) ──
