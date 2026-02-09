@@ -518,11 +518,22 @@ def lambda_handler(event, context):
         }
         if worst_storm:
              result.update(worst_storm)
-        else: # Add placeholder values if no erosive storm
-            result.update({
-                "total_rain": df_station['RR'].sum() if not df_station.empty else 0,
-                "I30": 0, "EI30": 0, "alert_label": "No risk"
-            })
+        else:
+            # Use the worst non-erosive storm's computed values for informational purposes
+            worst_any = max(storm_results, key=lambda s: s["EI30"]) if storm_results else None
+            if worst_any:
+                result.update({
+                    "total_rain": worst_any["total_rain"],
+                    "I30": worst_any["I30"],
+                    "EI30": worst_any["EI30"],
+                    "is_erosive": False,
+                    "alert_label": "No risk",
+                })
+            else:
+                result.update({
+                    "total_rain": df_station['RR'].sum() if not df_station.empty else 0,
+                    "I30": 0, "EI30": 0, "alert_label": "No risk"
+                })
         all_station_results.append(result)
         
     # 4. Filter for significant alerts
