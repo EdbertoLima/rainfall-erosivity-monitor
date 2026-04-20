@@ -1161,7 +1161,7 @@ def main():
     if st.sidebar.button(get_text("refresh_coords", lang)):
         st.session_state.get_data_clicked = True
 
-    buffer_km = st.sidebar.slider(f"##### {get_text('buffer_radius', lang)}", 5, 100, 25)
+    buffer_km = st.sidebar.slider(f"#####{get_text('buffer_radius', lang)}", 5, 100, 25)
 
     # Time range
     st.sidebar.markdown(
