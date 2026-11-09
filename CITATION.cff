@@ -13,6 +13,7 @@ authors:
     affiliation: BAW Research
     orcid: "https://orcid.org/0000-0002-8447-8460"
 repository-code: "https://github.com/EdbertoLima/rainfall-erosivity-monitor"
+doi: 10.5281/zenodo.24081100
 license: MIT
 keywords:
   - rainfall erosivity
