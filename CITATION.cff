@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it using the metadata from this file.
+type: software
+title: "Rainfall Erosivity Monitor (REM)"
+abstract: >-
+  Streamlit web application for monitoring rainfall erosivity and soil erosion risk.
+  It uses precipitation data from GeoSphere Austria weather stations (TAWES, INCA) to
+  calculate the EI30 erosivity index following USLE/RUSLE2, detects erosive storm events,
+  issues colour-coded alerts and recommends field surveys after erosive events.
+authors:
+  - given-names: Edberto
+    family-names: Moura Lima
+    affiliation: BAW Research
+    orcid: "https://orcid.org/0000-0002-8447-8460"
+repository-code: "https://github.com/EdbertoLima/rainfall-erosivity-monitor"
+license: MIT
+keywords:
+  - rainfall erosivity
+  - EI30
+  - soil erosion
+  - RUSLE
+  - GeoSphere Austria
+  - Streamlit
